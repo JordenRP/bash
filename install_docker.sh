@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 # Обновление списка пакетов
 sudo apt update
