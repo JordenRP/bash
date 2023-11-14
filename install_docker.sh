@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Обновление списка пакетов
@@ -21,4 +22,4 @@ sudo apt install docker-ce -y
 # Проверка запуска Docker
 sudo systemctl status docker
 
- sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER
