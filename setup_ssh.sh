@@ -18,10 +18,7 @@ mkdir -p "$SSH_DIR"
 
 # Проверяем существует ли файл config и создаем его, если нет
 if [ ! -f "$CONFIG" ]; then
-    echo "Host *" > "$CONFIG"
-    echo "    AddKeysToAgent yes" >> "$CONFIG"
-    echo "    UseKeychain yes" >> "$CONFIG"
-    echo "    IdentityFile ~/.ssh/id_rsa" >> "$CONFIG"
+    echo "" > "$CONFIG"
 fi
 
 # Генерируем SSH ключ, если он не существует
@@ -37,3 +34,4 @@ echo "Config entry added for $HOST"
 # Отображение результата конфигурации
 echo "Current SSH configuration for $HOST:"
 grep -A 2 "Host $HOST" "$CONFIG"
+cat "$KEY.pub"
